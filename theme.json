@@ -5,5 +5,11 @@
       "contentSize": "720px",
       "wideSize": "1100px"
     }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff"
+    }
   }
+
 }
