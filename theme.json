@@ -36,7 +36,7 @@
       "palette": [
         {
           "slug": "accent",
-          "color": "#8c4a32",
+          "color": "#4a6fa5",
           "name": "Accent"
         }
       ]
@@ -51,6 +51,22 @@
       "fontFamily": "var(--wp--preset--font-family--roboto)",
       "fontSize": "18px",
       "lineHeight": "1.6"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--accent)",
+          "text": "#ffffff"
+        },
+        "border": {
+          "radius": "4px"
+        },
+        ":hover": {
+          "color": {
+            "background": "#3f5f8a"
+          }
+        }
+      }
     }
   }
 }
