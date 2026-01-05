@@ -31,11 +31,21 @@
           ]
         }
       ]
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "accent",
+          "color": "#8c4a32",
+          "name": "Accent"
+        }
+      ]
     }
   },
   "styles": {
     "color": {
-      "background": "#ffffff"
+      "background": "#ffffff",
+      "text": "#333333"
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--roboto)",
