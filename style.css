@@ -3,3 +3,37 @@ Theme Name: Awen Arts Child
 Template: twentytwentyfour
 Version: 1.0
 */
+/* =========================
+   Awen Home: organic section
+   ========================= */
+:root{
+  --awen-radius: 18px;
+  --awen-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* A reusable “Awen Section” wrapper */
+.awen-section{
+  border-radius: calc(var(--awen-radius) + 6px);
+  box-shadow: var(--awen-shadow);
+  overflow: hidden;
+}
+
+/* Subtle “inspiration glow” (keep it barely-there) */
+.awen-glow{
+  background:
+    radial-gradient(circle at 30% 0%,
+      rgba(140, 90, 60, 0.10),
+      rgba(244, 241, 236, 0.0) 60%);
+}
+
+/* Softer artwork cards / images */
+.wp-block-image img{
+  border-radius: var(--awen-radius);
+}
+
+/* Buttons: clean, modern pill */
+.wp-block-button__link{
+  border-radius: 999px;
+  padding: 0.85em 1.15em;
+  text-decoration: none;
+}
