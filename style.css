@@ -37,3 +37,39 @@ Version: 1.0
   padding: 0.85em 1.15em;
   text-decoration: none;
 }
+/* =========================
+   Awen Home: gallery polish
+   ========================= */
+
+/* Consistent spacing for section headings */
+.awen-home h2{
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+/* Soft “whisper line” under headings */
+.awen-kicker{
+  font-size: 0.95em;
+  opacity: 0.85;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+/* Optional: make Query Loop / Post Template items feel like cards */
+.awen-card{
+  border-radius: var(--awen-radius);
+  box-shadow: var(--awen-shadow);
+  overflow: hidden;
+  background: rgba(255,255,255,0.35); /* subtle lift on parchment */
+}
+
+/* If your preview uses images, keep them clean */
+.awen-card .wp-block-image img{
+  border-radius: 0; /* card controls rounding */
+}
+
+/* Gentle hover without gimmicks */
+.awen-card:hover{
+  transform: translateY(-2px);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
