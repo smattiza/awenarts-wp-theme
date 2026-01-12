@@ -95,6 +95,13 @@ Version: 1.0
   overflow: hidden;
 }
 
+/* Featured print gradient container fix */
+.awen-featured-print,
+.awen-featured-print .wp-block-group__inner-container{
+  border-radius: var(--awen-radius);
+  overflow: hidden;
+}
+
 /* Mobile spacing adjustments */
 @media (max-width: 768px) {
 
@@ -127,3 +134,49 @@ Version: 1.0
 
 }
 
+
+/* =========================
+   Awen Prints page styling
+   ========================= */
+
+.awen-prints .awen-kicker{
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/* Featured print: keep it special but not gigantic */
+.awen-prints .awen-featured-print{
+  border-radius: calc(var(--awen-radius) + 6px);
+  overflow: hidden;
+}
+
+/* Ensure any gradient/background respects rounding */
+.awen-prints .awen-featured-print,
+.awen-prints .awen-featured-print .wp-block-group__inner-container{
+  overflow: hidden;
+}
+
+/* Prints page: slightly denser than Home */
+.awen-prints .awen-card{
+  /* keep your existing card style; this just ensures consistency */
+}
+
+/* Mobile tightening */
+@media (max-width: 768px){
+
+  /* Reduce overall section padding on prints */
+  .awen-prints .awen-section{
+    padding: 1.5rem;
+  }
+
+  /* Tighten card padding for long scrolling lists */
+  .awen-prints .awen-card{
+    box-shadow: var(--awen-shadow);
+  }
+
+  /* Optional: reduce button padding slightly on prints */
+  .awen-prints .wp-block-button__link{
+    padding: 0.75em 1.05em;
+  }
+}
