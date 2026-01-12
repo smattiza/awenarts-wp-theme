@@ -38,16 +38,16 @@ Version: 1.0
   text-decoration: none;
 }
 /* =========================
-   Awen Home: gallery polish
+   Awen Home: section + cards
    ========================= */
 
-/* Consistent spacing for section headings */
+/* Home-scoped optional heading rhythm */
 .awen-home h2{
   margin-top: 0;
   margin-bottom: 0.35em;
 }
 
-/* Soft “whisper line” under headings */
+/* Whisper line under headings */
 .awen-kicker{
   font-size: 0.95em;
   opacity: 0.85;
@@ -55,21 +55,34 @@ Version: 1.0
   margin-bottom: 1.25em;
 }
 
-/* Optional: make Query Loop / Post Template items feel like cards */
+/* Card content spacing */
 .awen-card{
   border-radius: var(--awen-radius);
   box-shadow: var(--awen-shadow);
   overflow: hidden;
-  background: rgba(255,255,255,0.35); /* subtle lift on parchment */
+  background: rgba(255,255,255,0.35);
 }
 
-/* If your preview uses images, keep them clean */
+/* Ensure inner content doesn't glue to the edges if you forget padding */
+.awen-card > *{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* If a card starts with an image, let it be edge-to-edge */
+.awen-card .wp-block-image{
+  margin: 0;
+}
 .awen-card .wp-block-image img{
   border-radius: 0; /* card controls rounding */
+  display: block;
+  width: 100%;
 }
 
-/* Gentle hover without gimmicks */
-.awen-card:hover{
-  transform: translateY(-2px);
-  transition: transform 140ms ease, box-shadow 140ms ease;
+/* Home masthead hero image polish */
+.awen-home .awen-masthead .wp-block-image img,
+.awen-home .awen-masthead .wp-block-cover{
+  border-radius: calc(var(--awen-radius) + 6px);
+  box-shadow: var(--awen-shadow);
+  overflow: hidden;
 }
