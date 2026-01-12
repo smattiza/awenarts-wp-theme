@@ -69,14 +69,22 @@ Version: 1.0
   margin-right: 0;
 }
 
-/* If a card starts with an image, let it be edge-to-edge */
 .awen-card .wp-block-image{
   margin: 0;
 }
+
 .awen-card .wp-block-image img{
-  border-radius: 0; /* card controls rounding */
   display: block;
   width: 100%;
+  height: auto;
+  border-radius: 0; /* card handles rounding */
+}
+
+/* Ensure clipping works with WP inner wrappers */
+.awen-card,
+.awen-card .wp-block-group__inner-container{
+  border-radius: var(--awen-radius);
+  overflow: hidden;
 }
 
 /* Home masthead hero image polish */
@@ -86,3 +94,36 @@ Version: 1.0
   box-shadow: var(--awen-shadow);
   overflow: hidden;
 }
+
+/* Mobile spacing adjustments */
+@media (max-width: 768px) {
+
+  /* Tighten masthead spacing */
+  .awen-home .awen-masthead{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Reduce hero image dominance */
+  .awen-home .awen-masthead img{
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+    /* Tighten card padding on mobile */
+  .awen-home .awen-card{
+    padding: 1.25rem;
+  }
+
+  /* Reduce spacing between stacked cards */
+  .awen-home .awen-card + .awen-card{
+    margin-top: 1.25rem;
+  }
+
+    /* Make secondary panels lighter on mobile */
+  .awen-home .awen-section{
+    padding: 1.75rem;
+  }
+
+}
+
