@@ -263,7 +263,20 @@ Editor classes to apply:
 .awen-hero .wp-block-image{
   margin-top: clamp(12px, 2vw, 20px);
 }
+.projects-cta{
+  margin-top: clamp(32px, 6vw, 64px);
+  opacity: 0.85;
+}
+.projects-cta a{
+  text-decoration: none;
+}
 
+.projects-cta a:hover,
+.projects-cta a:focus-visible{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
 /* =========================
    Awen Footer (final alignment pattern)
    ========================= */
